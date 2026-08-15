@@ -11,7 +11,10 @@ sudo aptitude install -y \
     git \
     vim \
     tree \
-    jq
+    jq \
+    fcitx5 \
+    fcitx5-mozc \
+    fcitx5-configtool
 
 # gh
 (type -p wget >/dev/null || (sudo apt update && sudo apt install wget -y)) \
