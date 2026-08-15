@@ -2,7 +2,7 @@
 
 sudo apt update
 
-sudo apt install aptitude
+sudo apt install -y aptitude
 
 sudo aptitude install -y \
     build-essential \
