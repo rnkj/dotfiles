@@ -1,0 +1,5 @@
+alias mv='mv -vi'
+alias cp='cp -vip'
+alias rm='rm -vi'
+
+alias zel='zellij'
