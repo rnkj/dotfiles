@@ -71,6 +71,16 @@ input {
     // focus-follows-mouse max-scroll-amount="0%"
 }
 
+environment {
+    GTK_IM_MODULE "fcitx"
+    QT_IM_MODULE "fcitx"
+    XMODIFIERS "@im=fcitx"
+    INPUT_METHOD "fcitx"
+    SDL_IM_MODULE "fcitx"
+}
+
+spawn-at-startup "fcitx5" "-d"
+
 // You can configure outputs by their name, which you can find
 // by running `niri msg outputs` while inside a niri instance.
 // The built-in laptop monitor is usually called "eDP-1".
@@ -326,6 +336,11 @@ window-rule {
     // - host Firefox (app-id is "firefox")
     // - Flatpak Firefox (app-id is "org.mozilla.firefox")
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    open-floating true
+}
+
+window-rule {
+    match app-id="fcitx" title="^Fcitx5 Input Window$"
     open-floating true
 }
 
