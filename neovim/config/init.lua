@@ -43,6 +43,7 @@ if vim.env.ZELLIJ then
   vim.keymap.set('n', '<C-p>n', za("new-pane"),                   { desc = "Zellij: new pane" })
   vim.keymap.set('n', '<C-p>d', za("new-pane --direction down"),  { desc = "Zellij: split down" })
   vim.keymap.set('n', '<C-p>r', za("new-pane --direction right"), { desc = "Zellij: split right" })
+  vim.keymap.set('n', '<C-p>s', za("new-pane --stacked"),         { desc = "Zellij: new stacked pane" })
   vim.keymap.set('n', '<C-p>x', za("close-pane"),                 { desc = "Zellij: close pane" })
   vim.keymap.set('n', '<C-p>f', za("toggle-fullscreen"),          { desc = "Zellij: toggle fullscreen" })
   vim.keymap.set('n', '<C-p>w', za("toggle-floating-panes"),      { desc = "Zellij: toggle floating" })
