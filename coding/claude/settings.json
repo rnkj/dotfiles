@@ -9,12 +9,12 @@
       "allowRead": ["."]
     },
     "network": {
-      "allowedDomains": {
+      "allowedDomains": [
         "huggingface.co",
         "*.huggingface.co",
         "api.wandb.ai",
         "*.wandb.ai"
-      }
+      ]
     }
   }
 }
