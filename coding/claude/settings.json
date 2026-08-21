@@ -1,0 +1,20 @@
+{
+  "sandbox": {
+    "enabled": true,
+    "autoAllowBashIfSandboxed": true,
+    "failIfUnavailable": true,
+    "allowUnsandboxedCommands": false,
+    "filesystem": {
+      "denyRead": ["~/"],
+      "allowRead": ["."]
+    },
+    "network": {
+      "allowedDomains": {
+        "huggingface.co",
+        "*.huggingface.co",
+        "api.wandb.ai",
+        "*.wandb.ai"
+      }
+    }
+  }
+}
