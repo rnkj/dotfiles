@@ -1,5 +1,10 @@
 require("config.lazy")
 
+vim.opt.expandtab = true
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.softtabstop = 2
+
 if vim.env.ZELLIJ then
   local function za(cmd)
     return function() vim.fn.system("zellij action " .. cmd) end
