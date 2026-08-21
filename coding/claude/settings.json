@@ -18,8 +18,16 @@
     "failIfUnavailable": true,
     "allowUnsandboxedCommands": false,
     "filesystem": {
-      "denyRead": ["~/"],
-      "allowRead": ["."]
+      "denyRead": ["~"],
+      "allowRead": [
+        ".", 
+        "~/.cache", 
+        "~/.claude", 
+        "~/.config", 
+        "~/.local", 
+        "~/.pixi", 
+        "~/.uv"
+      ]
     },
     "network": {
       "allowedDomains": [
