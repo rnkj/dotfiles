@@ -36,5 +36,5 @@ bash ./scripts/copy_settings.sh <dest-dir>
 
 Using `.devcontainer/` requires **Docker** and **DevPod**.
 
-See [ubuntu/optional/install_docker.sh](../ubuntu/optional/install_docker.sh) for the installation steps.
+See [scripts/install_docker.sh](../scripts/install_docker.sh) for the installation steps.
 The command to install DevPod is printed as a message after running that script.

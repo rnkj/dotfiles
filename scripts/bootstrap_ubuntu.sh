@@ -1,10 +1,10 @@
 #!/bin/bash
 
-sudo apt update
+set -euo pipefail
 
-sudo apt install -y aptitude
-
-sudo aptitude install -y \
+# Dependencies
+sudo apt-get update -qq
+sudo apt-get install -y \
     build-essential \
     curl \
     wget \
@@ -74,3 +74,20 @@ sed "s|target/.*/release/|${ZELLIJ_PREFIX}/|" /tmp/zellij-dl/zellij.sha256sum | 
 "$ZELLIJ_PREFIX/zellij" setup --generate-completion bash > "$ZELLIJ_PREFIX/zellij.bash"
 ln -sf "$ZELLIJ_PREFIX/zellij" ~/.local/bin/zellij
 ln -sf "$ZELLIJ_PREFIX/zellij.bash" ~/.local/share/bash-completion/completions/zellij
+
+# Dotfiles
+source "$(dirname "${BASH_SOURCE[0]}")/lib/link.sh"
+
+# "<path in this repo>:<path relative to $HOME>"
+LINKS=(
+  "bash/bashrc:.bashrc"
+  "bash/bash_aliases:.bash_aliases"
+  "neovim/config:.config/nvim"
+  "niri/config:.config/niri"
+)
+
+for link in "${LINKS[@]}"; do
+    link_file "${link%%:*}" "${link#*:}"
+done
+
+echo "Dotfiles installation complete!"
