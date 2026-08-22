@@ -18,15 +18,47 @@
     "failIfUnavailable": true,
     "allowUnsandboxedCommands": false,
     "filesystem": {
-      "denyRead": ["~"],
+      "denyRead": [
+        "~"
+      ],
       "allowRead": [
-        ".", 
-        "~/.cache", 
-        "~/.claude", 
-        "~/.config", 
-        "~/.local", 
-        "~/.pixi", 
-        "~/.uv"
+        ".",
+        "~/.cache",
+        "~/.claude",
+        "~/.config",
+        "~/.local",
+        "~/.nv",
+        "~/.pixi",
+        "~/.uv",
+        "/dev/tty*",
+        "/dev/fd/*",
+        "/dev/shm",
+        "/dev/random",
+        "/dev/urandom",
+        "/dev/zero",
+        "/dev/stderr",
+        "/dev/stdin",
+        "/dev/stdout",
+        "/dev/nvidia*",
+        "/dev/dri/renderD128",
+        "/tmp"
+      ],
+      "allowWrite": [
+        ".",
+        "/tmp",
+        "~/.cache",
+        "~/.claude",
+        "~/.nv",
+        "~/.pixi",
+        "~/.uv",
+        "/dev/tty*",
+        "/dev/fd/*",
+        "/dev/shm",
+        "/dev/null",
+        "/dev/stderr",
+        "/dev/stdout",
+        "/dev/nvidia*",
+        "/dev/dri/renderD128"
       ]
     },
     "network": {
