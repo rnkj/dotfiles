@@ -5,8 +5,8 @@ set -euo pipefail
 # Dependencies
 if command -v apt-get &> /dev/null; then
   sudo apt-get update -qq
-  sudo apt-get install --no-install-recommend -y \
-    ca-certificate \
+  sudo apt-get install --no-install-recommends -y \
+    ca-certificates \
     build-essential \
     curl \
     wget \
@@ -16,7 +16,7 @@ if command -v apt-get &> /dev/null; then
 fi
 
 # Rust & Cargo
-curl https://sh.rustup.rs -sSf | sh
+curl https://sh.rustup.rs -sSf | sh -s -- -y
 
 # Pixi
 curl -fsSL https://pixi.sh/install.sh | sh

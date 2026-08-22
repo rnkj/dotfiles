@@ -38,3 +38,20 @@ Using `.devcontainer/` requires **Docker** and **DevPod**.
 
 See [scripts/install_docker.sh](../scripts/install_docker.sh) for the installation steps.
 The command to install DevPod is printed as a message after running that script.
+
+### Starting the container
+
+Run `devpod up` in the directory that holds `.devcontainer/`.
+
+```bash
+devpod up . --ide none
+```
+
+[scripts/setup_container.sh](../scripts/setup_container.sh) is provided as the DevPod setup.
+dotfiles install script and does the package installation and the dotfiles placement.
+
+```bash
+devpod up . --ide none \
+  --dotfiles https://github.com/rnkj/dotfiles.git \
+  --dotfiles-script scripts/setup_container.sh
+```
