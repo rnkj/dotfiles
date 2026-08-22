@@ -116,6 +116,4 @@ if ! shopt -oq posix; then
   fi
 fi
 
-. "$HOME/.local/bin/env"
-
-export PATH="/home/rnkj/.pixi/bin:$PATH"
+export PATH="$HOME/.pixi/bin:$PATH"
